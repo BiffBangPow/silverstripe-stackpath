@@ -1,0 +1,25 @@
+{
+  "name": "biffbangpow/silverstripe-stackpath",
+  "description": "Stackpath integration for Silverstripe",
+  "type": "silverstripe-vendormodule",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Tim Burt",
+      "email": "tim@biffbangpow.com"
+    }
+  ],
+  "require": {
+    "silverstripe/vendor-plugin": "^1.0",
+    "silverstripe/cms": "^4",
+    "guzzlehttp/guzzle": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "BiffBangPow\\Stackpath\\": "src/"
+    }
+  },
+  "extra": {
+  }
+}
