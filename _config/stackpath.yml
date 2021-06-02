@@ -1,0 +1,17 @@
+---
+Name: bbp-stackpath
+---
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - BiffBangPow\Stackpath\Extension\SiteConfigExtension
+
+SilverStripe\Core\Injector\Injector:
+  Psr\Log\LoggerInterface:
+    calls:
+      SPLogFileHandler: [ pushHandler, [ '%$SPLogFileHandler' ] ]
+  SPLogFileHandler:
+    class: Monolog\Handler\StreamHandler
+    constructor:
+      - "../stackpath.log"
+      - "info"
